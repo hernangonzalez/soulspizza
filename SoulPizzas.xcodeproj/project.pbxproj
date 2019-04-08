@@ -8,20 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		5F850524225BC93600643411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F850523225BC93600643411 /* AppDelegate.swift */; };
-		5F850526225BC93600643411 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F850525225BC93600643411 /* ViewController.swift */; };
-		5F850529225BC93600643411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F850527225BC93600643411 /* Main.storyboard */; };
 		5F85052B225BC93800643411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F85052A225BC93800643411 /* Assets.xcassets */; };
 		5F85052E225BC93800643411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F85052C225BC93800643411 /* LaunchScreen.storyboard */; };
+		5F85053C225BCAEF00643411 /* PizzasSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F85053B225BCAEF00643411 /* PizzasSDK.swift */; };
+		5F85055F225BCC0300643411 /* libPizzasSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F850539225BCAEE00643411 /* libPizzasSDK.a */; };
+		5F850565225BD6F500643411 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F850564225BD6F500643411 /* Network.swift */; };
+		5F850567225BD91800643411 /* PizzaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F850566225BD91800643411 /* PizzaAPI.swift */; };
+		5F85056D225BEC2D00643411 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F85056C225BEC2D00643411 /* MapViewController.swift */; };
+		5F850570225BEF2500643411 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F85056F225BEF2500643411 /* RootViewController.swift */; };
+		5F850572225BF4B200643411 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F850571225BF4B200643411 /* MapViewModel.swift */; };
+		9E33AC4E1E55CBD482E627F8 /* Pods_SoulPizzas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */; };
+		F0DA1480D7078C56BCC0C6A7 /* Pods_PizzasSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D2FD2E88856E713B662CF /* Pods_PizzasSDK.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5F85055D225BCBF200643411 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F850518225BC93600643411 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F850538225BCAEE00643411;
+			remoteInfo = PizzasSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5F850537225BCAEE00643411 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		479D2FD2E88856E713B662CF /* Pods_PizzasSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizzasSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5868C24D2F93AB80FD0AB92D /* Pods-PizzasSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzasSDK.debug.xcconfig"; path = "Target Support Files/Pods-PizzasSDK/Pods-PizzasSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		5F850520225BC93600643411 /* SoulPizzas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoulPizzas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F850523225BC93600643411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F850525225BC93600643411 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5F850528225BC93600643411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F85052A225BC93800643411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F85052D225BC93800643411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F85052F225BC93800643411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F850539225BCAEE00643411 /* libPizzasSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPizzasSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F85053B225BCAEF00643411 /* PizzasSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasSDK.swift; sourceTree = "<group>"; };
+		5F850564225BD6F500643411 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		5F850566225BD91800643411 /* PizzaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaAPI.swift; sourceTree = "<group>"; };
+		5F85056C225BEC2D00643411 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5F85056F225BEF2500643411 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		5F850571225BF4B200643411 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulPizzas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A39F016EAC2FDC90724FA3BD /* Pods-SoulPizzas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.release.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.release.xcconfig"; sourceTree = "<group>"; };
+		B6A2A1CECE831D7DF477CFCC /* Pods-SoulPizzas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.debug.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.debug.xcconfig"; sourceTree = "<group>"; };
+		EC7B809B8CCD6890EC9AD142 /* Pods-PizzasSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzasSDK.release.xcconfig"; path = "Target Support Files/Pods-PizzasSDK/Pods-PizzasSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +69,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F85055F225BCC0300643411 /* libPizzasSDK.a in Frameworks */,
+				9E33AC4E1E55CBD482E627F8 /* Pods_SoulPizzas.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F850536225BCAEE00643411 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0DA1480D7078C56BCC0C6A7 /* Pods_PizzasSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29ADC1BD4E20849D9BBCED51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */,
+				479D2FD2E88856E713B662CF /* Pods_PizzasSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33E7DBFD0077E251FDA3C083 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6A2A1CECE831D7DF477CFCC /* Pods-SoulPizzas.debug.xcconfig */,
+				A39F016EAC2FDC90724FA3BD /* Pods-SoulPizzas.release.xcconfig */,
+				5868C24D2F93AB80FD0AB92D /* Pods-PizzasSDK.debug.xcconfig */,
+				EC7B809B8CCD6890EC9AD142 /* Pods-PizzasSDK.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5F850517225BC93600643411 = {
 			isa = PBXGroup;
 			children = (
 				5F850522225BC93600643411 /* SoulPizzas */,
+				5F85053A225BCAEF00643411 /* PizzasSDK */,
 				5F850521225BC93600643411 /* Products */,
+				33E7DBFD0077E251FDA3C083 /* Pods */,
+				29ADC1BD4E20849D9BBCED51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5F850520225BC93600643411 /* SoulPizzas.app */,
+				5F850539225BCAEE00643411 /* libPizzasSDK.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +128,41 @@
 		5F850522225BC93600643411 /* SoulPizzas */ = {
 			isa = PBXGroup;
 			children = (
+				5F85056A225BE82C00643411 /* Scenes */,
 				5F850523225BC93600643411 /* AppDelegate.swift */,
-				5F850525225BC93600643411 /* ViewController.swift */,
-				5F850527225BC93600643411 /* Main.storyboard */,
 				5F85052A225BC93800643411 /* Assets.xcassets */,
 				5F85052C225BC93800643411 /* LaunchScreen.storyboard */,
 				5F85052F225BC93800643411 /* Info.plist */,
 			);
 			path = SoulPizzas;
+			sourceTree = "<group>";
+		};
+		5F85053A225BCAEF00643411 /* PizzasSDK */ = {
+			isa = PBXGroup;
+			children = (
+				5F850564225BD6F500643411 /* Network.swift */,
+				5F85053B225BCAEF00643411 /* PizzasSDK.swift */,
+				5F850566225BD91800643411 /* PizzaAPI.swift */,
+			);
+			path = PizzasSDK;
+			sourceTree = "<group>";
+		};
+		5F85056A225BE82C00643411 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5F85056B225BEC2000643411 /* Map */,
+				5F85056F225BEF2500643411 /* RootViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5F85056B225BEC2000643411 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5F85056C225BEC2D00643411 /* MapViewController.swift */,
+				5F850571225BF4B200643411 /* MapViewModel.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,18 +172,40 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F850532225BC93800643411 /* Build configuration list for PBXNativeTarget "SoulPizzas" */;
 			buildPhases = (
+				1309097D53C5C97DC7B6FF4C /* [CP] Check Pods Manifest.lock */,
 				5F85051C225BC93600643411 /* Sources */,
 				5F85051D225BC93600643411 /* Frameworks */,
 				5F85051E225BC93600643411 /* Resources */,
+				97CF67610FC009FA39344987 /* [CP] Copy Pods Resources */,
+				0C4F19273CDD2517823EFDB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5F85055E225BCBF200643411 /* PBXTargetDependency */,
 			);
 			name = SoulPizzas;
 			productName = SoulPizzas;
 			productReference = 5F850520225BC93600643411 /* SoulPizzas.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5F850538225BCAEE00643411 /* PizzasSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F85053F225BCAEF00643411 /* Build configuration list for PBXNativeTarget "PizzasSDK" */;
+			buildPhases = (
+				648B53FB7E4C7D6624B1C8DF /* [CP] Check Pods Manifest.lock */,
+				5F850535225BCAEE00643411 /* Sources */,
+				5F850536225BCAEE00643411 /* Frameworks */,
+				5F850537225BCAEE00643411 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PizzasSDK;
+			productName = PizzasSDK;
+			productReference = 5F850539225BCAEE00643411 /* libPizzasSDK.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +218,9 @@
 				ORGANIZATIONNAME = "Hernan G. Gonzalez";
 				TargetAttributes = {
 					5F85051F225BC93600643411 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					5F850538225BCAEE00643411 = {
 						CreatedOnToolsVersion = 10.2;
 					};
 				};
@@ -113,6 +239,7 @@
 			projectRoot = "";
 			targets = (
 				5F85051F225BC93600643411 /* SoulPizzas */,
+				5F850538225BCAEE00643411 /* PizzasSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -124,33 +251,147 @@
 			files = (
 				5F85052E225BC93800643411 /* LaunchScreen.storyboard in Resources */,
 				5F85052B225BC93800643411 /* Assets.xcassets in Resources */,
-				5F850529225BC93600643411 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C4F19273CDD2517823EFDB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1309097D53C5C97DC7B6FF4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoulPizzas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		648B53FB7E4C7D6624B1C8DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PizzasSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97CF67610FC009FA39344987 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F85051C225BC93600643411 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F850526225BC93600643411 /* ViewController.swift in Sources */,
+				5F85056D225BEC2D00643411 /* MapViewController.swift in Sources */,
 				5F850524225BC93600643411 /* AppDelegate.swift in Sources */,
+				5F850570225BEF2500643411 /* RootViewController.swift in Sources */,
+				5F850572225BF4B200643411 /* MapViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F850535225BCAEE00643411 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F850567225BD91800643411 /* PizzaAPI.swift in Sources */,
+				5F850565225BD6F500643411 /* Network.swift in Sources */,
+				5F85053C225BCAEF00643411 /* PizzasSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		5F850527225BC93600643411 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5F850528225BC93600643411 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		5F85055E225BCBF200643411 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F850538225BCAEE00643411 /* PizzasSDK */;
+			targetProxy = 5F85055D225BCBF200643411 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		5F85052C225BC93800643411 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,9 +521,11 @@
 		};
 		5F850533225BC93800643411 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6A2A1CECE831D7DF477CFCC /* Pods-SoulPizzas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SoulPizzas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,6 +533,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hernan.ios.SoulPizzas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,9 +541,11 @@
 		};
 		5F850534225BC93800643411 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A39F016EAC2FDC90724FA3BD /* Pods-SoulPizzas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SoulPizzas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +553,31 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hernan.ios.SoulPizzas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5F85053D225BCAEF00643411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5868C24D2F93AB80FD0AB92D /* Pods-PizzasSDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F85053E225BCAEF00643411 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC7B809B8CCD6890EC9AD142 /* Pods-PizzasSDK.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +600,15 @@
 			buildConfigurations = (
 				5F850533225BC93800643411 /* Debug */,
 				5F850534225BC93800643411 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F85053F225BCAEF00643411 /* Build configuration list for PBXNativeTarget "PizzasSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F85053D225BCAEF00643411 /* Debug */,
+				5F85053E225BCAEF00643411 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
