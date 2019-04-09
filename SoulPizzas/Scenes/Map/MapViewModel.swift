@@ -11,29 +11,32 @@ import PizzasSDK
 import ReactiveSwift
 import CoreLocation
 import GoogleMaps
+import Result
+
+class Marker: GMSMarker {
+    private let model: Place
+    
+    init(_ place: Place) {
+        model = place
+        super.init()
+        position = place.coordinate
+        title = place.name
+        snippet = place.formattedAddress
+    }
+}
 
 struct MapViewModel {
-    private let items = MutableProperty<[CLLocationCoordinate2D]>([])
-}
-
-extension MapViewModel {
     
-    func updateResults() {
-        items.value = [CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20),
-                       CLLocationCoordinate2D(latitude: -32.86, longitude: 150.20),
-                       CLLocationCoordinate2D(latitude: -31.86, longitude: 152.20)]
-    }
-    
-    var markers: Property<[GMSMarker]> {
-        let markers = items.map { coords -> [GMSMarker] in
-            return coords.map {
-                let marker = GMSMarker()
-                marker.position = $0
-                marker.title = $0.latitude.description
-                marker.snippet = $0.longitude.description
-                return marker
+    let refresh: Action<Void, [Marker], NetworkError> = Action {
+        return PizzasSDK.places().map {
+            $0.map {
+                Marker($0)
             }
         }
-        return Property(capturing: markers)
+    }
+    
+    var markers: Signal<[Marker], NoError> {
+        return refresh.values
     }
 }
+

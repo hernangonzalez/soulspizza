@@ -18,6 +18,7 @@ class MapViewController: UIViewController {
     private let allZoomLevel: Float = 10.0
     private let viewModel = MapViewModel()
     private let disposables = ScopedDisposable(CompositeDisposable())
+    private lazy var search = SearchButton(frame: .zero)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,9 @@ class MapViewController: UIViewController {
         self.mapView = mapView
         
         // Bindings
-        disposables += reactive.updateMarkers <~ viewModel.markers
+        search.reactive.pressed = CocoaAction(viewModel.refresh)
+        search.reactive.inProgress <~ viewModel.refresh.isExecuting
+        reactive.updateMarkers <~ viewModel.markers
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,15 +46,11 @@ class MapViewController: UIViewController {
     override var navigationItem: UINavigationItem {
         let item = super.navigationItem
         if item.rightBarButtonItem == nil {
-            let search = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchPlaces))
-            item.rightBarButtonItem = search
+            
+            let button = UIBarButtonItem(customView: search)
+            item.rightBarButtonItem = button
         }
         return item
-    }
-    
-    @objc
-    private func searchPlaces() {
-        viewModel.updateResults()
     }
     
     fileprivate func update(markers: [GMSMarker]) {
@@ -73,7 +72,7 @@ class MapViewController: UIViewController {
 // MARK: Reactive
 extension Reactive where Base: MapViewController {
     
-    var updateMarkers: BindingTarget<[GMSMarker]> {
+    var updateMarkers: BindingTarget<[Marker]> {
         return makeBindingTarget { base, markers in
             base.update(markers: markers)
         }

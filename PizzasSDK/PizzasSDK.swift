@@ -7,15 +7,24 @@
 //
 import Alamofire
 import ReactiveSwift
+import CoreLocation
 
+// MARK: - Models
 public struct Media: Decodable {
     let url: URL
 }
 
 public struct Place: Decodable {
     let id: String
-    let name: String
-    let images: [Media]
+    let latitude: Double
+    let longitude: Double
+    public let name: String
+    public let images: [Media]
+    public let formattedAddress: String
+    
+    public var coordinate: CLLocationCoordinate2D {
+        return .init(latitude: latitude, longitude: longitude)
+    }
 }
 
 public struct Friend: Decodable {
@@ -24,6 +33,7 @@ public struct Friend: Decodable {
     let avatarUrl: URL
 }
 
+// MARK: Internals
 struct PlaceList: Decodable {
     let places: [Place]
 }
@@ -32,36 +42,26 @@ struct PlacesResponse: Decodable {
     let list: PlaceList
 }
 
+// MARK: - SDK
 public struct PizzasSDK {
-    public init() {
-        
-    }
     
-    public func fetchDetail() {
-        let api = PizzaAPI.detail("3")
-        let producer = api.producer() as SignalProducer<Place, NetworkError>
-        producer.startWithResult { result in
-            debugPrint(result.value!)
-        }
-    }
-
-    public func fetchPlaces() {
+    public static func places() -> SignalProducer<[Place], NetworkError> {
         let api = PizzaAPI.places
         let producer = api.producer() as SignalProducer<PlacesResponse, NetworkError>
-        producer.startWithResult { result in
-            debugPrint(result.value!.list.places.count)
+        return producer.map {
+            $0.list.places
         }
     }
     
-    public func fetchFriends() {
+    public static func details(from place: Place) -> SignalProducer<Place, NetworkError> {
+        let api = PizzaAPI.detail(place.id)
+        return api.producer()
+    }
+    
+    public static func friends(at place: Place) -> SignalProducer<[Friend], NetworkError> {
         let api = PizzaAPI.friends
-        let producer = api.producer() as SignalProducer<[Friend], NetworkError>
-        producer.startWithResult { result in
-            debugPrint(result.value!)
-        }
+        return api.producer()
     }
-    
-    
 }
 
 

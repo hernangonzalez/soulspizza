@@ -7,6 +7,10 @@ PODS:
   - GoogleMaps/Base (3.0.3)
   - GoogleMaps/Maps (3.0.3):
     - GoogleMaps/Base
+  - Kingfisher (5.3.1)
+  - Motion (1.4.3):
+    - Motion/Core (= 1.4.3)
+  - Motion/Core (1.4.3)
   - ReachabilitySwift (4.3.1)
   - ReactiveCocoa (9.0.0):
     - ReactiveSwift (~> 5.0)
@@ -19,6 +23,8 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireNetworkActivityIndicator
   - GoogleMaps
+  - Kingfisher
+  - Motion
   - ReachabilitySwift
   - ReactiveCocoa
   - ReactiveSwift
@@ -29,6 +35,8 @@ SPEC REPOS:
     - Alamofire
     - AlamofireNetworkActivityIndicator
     - GoogleMaps
+    - Kingfisher
+    - Motion
     - ReachabilitySwift
     - ReactiveCocoa
     - ReactiveSwift
@@ -39,12 +47,14 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireNetworkActivityIndicator: 9acc3de3ca6645bf0efed462396b0df13dd3e7b8
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+  Motion: 153ba49692997888556c7a95207278a8b1f8be95
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   ReactiveCocoa: 29709cf0cc7502ddd04a51220e10ee0336d8bec8
   ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   TinyConstraints: 03bc091844b98c18dbaead8b1153242a42721b56
 
-PODFILE CHECKSUM: ea3065afc0f567853fcdf1fe0719593fa37238fa
+PODFILE CHECKSUM: d934b7e34c76481b3f821a5b8774938ad7bb1ee8
 
 COCOAPODS: 1.6.1
