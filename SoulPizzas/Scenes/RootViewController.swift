@@ -11,8 +11,14 @@ import UIKit
 class RootViewController: UINavigationController {
     
     init() {
-        super.init(rootViewController: MapViewController())
+        let viewModel = MapViewModel()
+        let scene = MapViewController(viewModel)
+        super.init(rootViewController: scene)
         navigationBar.prefersLargeTitles = true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

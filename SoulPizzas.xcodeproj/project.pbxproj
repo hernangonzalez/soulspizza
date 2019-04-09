@@ -19,6 +19,12 @@
 		5F850572225BF4B200643411 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F850571225BF4B200643411 /* MapViewModel.swift */; };
 		5FF6B813225C63C3005891ED /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B812225C63C3005891ED /* SearchButton.swift */; };
 		5FF6B816225C6777005891ED /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B815225C6777005891ED /* Animatable.swift */; };
+		5FF6B819225CF3D1005891ED /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B818225CF3D1005891ED /* PlaceViewController.swift */; };
+		5FF6B81B225CF4D1005891ED /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B81A225CF4D1005891ED /* PlaceViewModel.swift */; };
+		5FF6B81D225CF5DA005891ED /* PlaceDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B81C225CF5DA005891ED /* PlaceDetailRouter.swift */; };
+		5FF6B81F225CFBA8005891ED /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B81E225CFBA8005891ED /* Cell.swift */; };
+		5FF6B821225CFD19005891ED /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B820225CFD18005891ED /* UIStackView.swift */; };
+		5FF6B823225D02CA005891ED /* UIViewController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B822225D02CA005891ED /* UIViewController+Error.swift */; };
 		9E33AC4E1E55CBD482E627F8 /* Pods_SoulPizzas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */; };
 		F0DA1480D7078C56BCC0C6A7 /* Pods_PizzasSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D2FD2E88856E713B662CF /* Pods_PizzasSDK.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +68,12 @@
 		5F850571225BF4B200643411 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		5FF6B812225C63C3005891ED /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		5FF6B815225C6777005891ED /* Animatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		5FF6B818225CF3D1005891ED /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		5FF6B81A225CF4D1005891ED /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
+		5FF6B81C225CF5DA005891ED /* PlaceDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailRouter.swift; sourceTree = "<group>"; };
+		5FF6B81E225CFBA8005891ED /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		5FF6B820225CFD18005891ED /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		5FF6B822225D02CA005891ED /* UIViewController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Error.swift"; sourceTree = "<group>"; };
 		7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulPizzas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39F016EAC2FDC90724FA3BD /* Pods-SoulPizzas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.release.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.release.xcconfig"; sourceTree = "<group>"; };
 		B6A2A1CECE831D7DF477CFCC /* Pods-SoulPizzas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.debug.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +144,8 @@
 		5F850522225BC93600643411 /* SoulPizzas */ = {
 			isa = PBXGroup;
 			children = (
+				5FF6B814225C63C8005891ED /* Extensions */,
+				5FF6B811225C63B4005891ED /* Components */,
 				5F85056A225BE82C00643411 /* Scenes */,
 				5F850523225BC93600643411 /* AppDelegate.swift */,
 				5F85052A225BC93800643411 /* Assets.xcassets */,
@@ -154,10 +168,10 @@
 		5F85056A225BE82C00643411 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				5FF6B814225C63C8005891ED /* Extensions */,
-				5FF6B811225C63B4005891ED /* Components */,
+				5FF6B817225CF3C3005891ED /* Detail */,
 				5F85056B225BEC2000643411 /* Map */,
 				5F85056F225BEF2500643411 /* RootViewController.swift */,
+				5FF6B81C225CF5DA005891ED /* PlaceDetailRouter.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -176,6 +190,7 @@
 			children = (
 				5FF6B812225C63C3005891ED /* SearchButton.swift */,
 				5FF6B815225C6777005891ED /* Animatable.swift */,
+				5FF6B822225D02CA005891ED /* UIViewController+Error.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -183,8 +198,19 @@
 		5FF6B814225C63C8005891ED /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5FF6B820225CFD18005891ED /* UIStackView.swift */,
+				5FF6B81E225CFBA8005891ED /* Cell.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5FF6B817225CF3C3005891ED /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6B818225CF3D1005891ED /* PlaceViewController.swift */,
+				5FF6B81A225CF4D1005891ED /* PlaceViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +319,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
@@ -307,6 +334,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
@@ -390,12 +418,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF6B81D225CF5DA005891ED /* PlaceDetailRouter.swift in Sources */,
+				5FF6B81B225CF4D1005891ED /* PlaceViewModel.swift in Sources */,
 				5FF6B813225C63C3005891ED /* SearchButton.swift in Sources */,
 				5FF6B816225C6777005891ED /* Animatable.swift in Sources */,
 				5F85056D225BEC2D00643411 /* MapViewController.swift in Sources */,
+				5FF6B819225CF3D1005891ED /* PlaceViewController.swift in Sources */,
 				5F850524225BC93600643411 /* AppDelegate.swift in Sources */,
+				5FF6B81F225CFBA8005891ED /* Cell.swift in Sources */,
 				5F850570225BEF2500643411 /* RootViewController.swift in Sources */,
+				5FF6B823225D02CA005891ED /* UIViewController+Error.swift in Sources */,
 				5F850572225BF4B200643411 /* MapViewModel.swift in Sources */,
+				5FF6B821225CFD19005891ED /* UIStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

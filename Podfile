@@ -7,6 +7,7 @@ target 'SoulPizzas' do
   pod 'ReactiveCocoa'
   pod 'Motion'
   pod 'Kingfisher'
+  pod 'SwiftMessages'
 end
 
 target 'PizzasSDK' do

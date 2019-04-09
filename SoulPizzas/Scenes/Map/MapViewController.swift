@@ -16,13 +16,21 @@ class MapViewController: UIViewController {
     private weak var mapView: GMSMapView!
     private let placeZoomLevel: Float = 16.0
     private let allZoomLevel: Float = 10.0
-    private let viewModel = MapViewModel()
+    private let viewModel: MapViewModel
     private let disposables = ScopedDisposable(CompositeDisposable())
     private lazy var search = SearchButton(frame: .zero)
     
+    init(_ model: MapViewModel) {
+        viewModel = model
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Best pizza in town"
         
         let mapView = GMSMapView(frame: .zero)
         view.addSubview(mapView)
@@ -36,6 +44,7 @@ class MapViewController: UIViewController {
         search.reactive.pressed = CocoaAction(viewModel.refresh)
         search.reactive.inProgress <~ viewModel.refresh.isExecuting
         reactive.updateMarkers <~ viewModel.markers
+        reactive.presentError <~ viewModel.error
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,11 +54,17 @@ class MapViewController: UIViewController {
     
     override var navigationItem: UINavigationItem {
         let item = super.navigationItem
+        item.title = viewModel.title
+        
         if item.rightBarButtonItem == nil {
-            
             let button = UIBarButtonItem(customView: search)
             item.rightBarButtonItem = button
         }
+        
+        if item.backBarButtonItem == nil {
+            item.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
+        
         return item
     }
     
@@ -86,6 +101,13 @@ extension MapViewController: GMSMapViewDelegate {
         let position = GMSCameraPosition(target: marker.position, zoom: placeZoomLevel)
         let update = GMSCameraUpdate.setCamera(position)
         mapView.animate(with: update)
-        return true
+        
+        if let detail = viewModel.detail(with: marker) {
+            let router = PlaceDetailRouter(navigation: navigationController)
+            router.present(detail)
+            return true
+        }
+
+        return false
     }
 }

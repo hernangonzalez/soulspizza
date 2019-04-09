@@ -17,6 +17,9 @@ PODS:
   - ReactiveSwift (5.0.1):
     - Result (~> 4.1)
   - Result (4.1.0)
+  - SwiftMessages (6.0.2):
+    - SwiftMessages/App (= 6.0.2)
+  - SwiftMessages/App (6.0.2)
   - TinyConstraints (4.0.0)
 
 DEPENDENCIES:
@@ -28,6 +31,7 @@ DEPENDENCIES:
   - ReachabilitySwift
   - ReactiveCocoa
   - ReactiveSwift
+  - SwiftMessages
   - TinyConstraints
 
 SPEC REPOS:
@@ -41,6 +45,7 @@ SPEC REPOS:
     - ReactiveCocoa
     - ReactiveSwift
     - Result
+    - SwiftMessages
     - TinyConstraints
 
 SPEC CHECKSUMS:
@@ -53,8 +58,9 @@ SPEC CHECKSUMS:
   ReactiveCocoa: 29709cf0cc7502ddd04a51220e10ee0336d8bec8
   ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
   TinyConstraints: 03bc091844b98c18dbaead8b1153242a42721b56
 
-PODFILE CHECKSUM: d934b7e34c76481b3f821a5b8774938ad7bb1ee8
+PODFILE CHECKSUM: c8a19c917b5bd30067335dc569bbecddce90c710
 
 COCOAPODS: 1.6.1
