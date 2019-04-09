@@ -42,13 +42,22 @@ class PlaceViewController: UIViewController {
         thumbnail.aspectRatio(1)
         thumbnail.kf.indicatorType = .activity
         thumbnail.kf.setImage(with: viewModel.thumbnail, options: [.transition(.fade(0.3))])
+        thumbnail.isUserInteractionEnabled = true
+        
+        let bookmark = BookmarkButton(frame: .zero)
+        bookmark.height(60)
+        thumbnail.addSubview(bookmark)
+        bookmark.bottomToSuperview(offset: -8)
+        bookmark.rightToSuperview(offset: -8)
         
         let users = UserCollectionView(viewModel.friends)
         users.height(60)
         
         let description = DescriptionView(frame: .zero)
+
+        let booking = BookPlaceView(frame: .zero)
         
-        let content = [thumbnail, users, description].stacked(axis: .vertical)
+        let content = [thumbnail, users, description, booking].stacked(axis: .vertical)
         content.spacing = 12
         scroll.addSubview(content)
         content.width(to: view)

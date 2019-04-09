@@ -31,6 +31,10 @@
 		5FF6B82B225D1551005891ED /* UserThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B82A225D1551005891ED /* UserThumbnailCell.swift */; };
 		5FF6B82D225D189E005891ED /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B82C225D189E005891ED /* Models.swift */; };
 		5FF6B830225D237E005891ED /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B82F225D237E005891ED /* DescriptionView.swift */; };
+		5FF6B832225D3507005891ED /* BookPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B831225D3507005891ED /* BookPlaceView.swift */; };
+		5FF6B834225D3976005891ED /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B833225D3976005891ED /* UIKit.swift */; };
+		5FF6B836225D3A4E005891ED /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B835225D3A4E005891ED /* SpringButton.swift */; };
+		5FF6B838225D3AA3005891ED /* BookmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B837225D3AA3005891ED /* BookmarkButton.swift */; };
 		9E33AC4E1E55CBD482E627F8 /* Pods_SoulPizzas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */; };
 		F0DA1480D7078C56BCC0C6A7 /* Pods_PizzasSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D2FD2E88856E713B662CF /* Pods_PizzasSDK.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +91,10 @@
 		5FF6B82C225D189E005891ED /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		5FF6B82E225D1907005891ED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5FF6B82F225D237E005891ED /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		5FF6B831225D3507005891ED /* BookPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPlaceView.swift; sourceTree = "<group>"; };
+		5FF6B833225D3976005891ED /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
+		5FF6B835225D3A4E005891ED /* SpringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
+		5FF6B837225D3AA3005891ED /* BookmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkButton.swift; sourceTree = "<group>"; };
 		7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulPizzas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39F016EAC2FDC90724FA3BD /* Pods-SoulPizzas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.release.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.release.xcconfig"; sourceTree = "<group>"; };
 		B6A2A1CECE831D7DF477CFCC /* Pods-SoulPizzas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.debug.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +215,7 @@
 				5FF6B815225C6777005891ED /* Animatable.swift */,
 				5FF6B822225D02CA005891ED /* UIViewController+Error.swift */,
 				5FF6B824225D08EA005891ED /* ThumbnailView.swift */,
+				5FF6B835225D3A4E005891ED /* SpringButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 			children = (
 				5FF6B820225CFD18005891ED /* UIStackView.swift */,
 				5FF6B81E225CFBA8005891ED /* Cell.swift */,
+				5FF6B833225D3976005891ED /* UIKit.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +239,8 @@
 				5FF6B828225D0FDE005891ED /* UserCollectionViewModel.swift */,
 				5FF6B82A225D1551005891ED /* UserThumbnailCell.swift */,
 				5FF6B82F225D237E005891ED /* DescriptionView.swift */,
+				5FF6B831225D3507005891ED /* BookPlaceView.swift */,
+				5FF6B837225D3AA3005891ED /* BookmarkButton.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -446,13 +458,17 @@
 				5FF6B82B225D1551005891ED /* UserThumbnailCell.swift in Sources */,
 				5F85056D225BEC2D00643411 /* MapViewController.swift in Sources */,
 				5FF6B825225D08EA005891ED /* ThumbnailView.swift in Sources */,
+				5FF6B838225D3AA3005891ED /* BookmarkButton.swift in Sources */,
+				5FF6B836225D3A4E005891ED /* SpringButton.swift in Sources */,
 				5FF6B819225CF3D1005891ED /* PlaceViewController.swift in Sources */,
 				5FF6B827225D0DC9005891ED /* UserCollectionView.swift in Sources */,
 				5F850524225BC93600643411 /* AppDelegate.swift in Sources */,
+				5FF6B834225D3976005891ED /* UIKit.swift in Sources */,
 				5FF6B81F225CFBA8005891ED /* Cell.swift in Sources */,
 				5F850570225BEF2500643411 /* RootViewController.swift in Sources */,
 				5FF6B823225D02CA005891ED /* UIViewController+Error.swift in Sources */,
 				5FF6B830225D237E005891ED /* DescriptionView.swift in Sources */,
+				5FF6B832225D3507005891ED /* BookPlaceView.swift in Sources */,
 				5F850572225BF4B200643411 /* MapViewModel.swift in Sources */,
 				5FF6B821225CFD19005891ED /* UIStackView.swift in Sources */,
 			);
