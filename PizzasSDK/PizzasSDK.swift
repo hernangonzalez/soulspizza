@@ -13,14 +13,6 @@ import CoreLocation
 public struct PizzasSDK {
     
     public static func places() -> SignalProducer<[Place], NetworkError> {
-        let place = Place(id: "0",
-                          latitude: 10, longitude: 10,
-                          friendIds: [],
-                          name: "hardcoded", images: [],
-                          formattedAddress: "")
-        return SignalProducer(value: [place])
-        
-        
         let api = PizzaAPI.places
         let producer = api.producer() as SignalProducer<PlacesResponse, NetworkError>
         return producer.map {
