@@ -11,13 +11,14 @@ import CoreLocation
 
 // MARK: - Models
 public struct Media: Decodable {
-    let url: URL
+    public let url: URL
 }
 
 public struct Place: Decodable {
     let id: String
     let latitude: Double
     let longitude: Double
+    let friendIds: [String]
     public let name: String
     public let images: [Media]
     public let formattedAddress: String
@@ -27,10 +28,10 @@ public struct Place: Decodable {
     }
 }
 
-public struct Friend: Decodable {
+public struct Profile: Decodable {
     let id: Int
-    let name: String
-    let avatarUrl: URL
+    public let name: String
+    public let avatarUrl: URL
 }
 
 // MARK: Internals
@@ -58,9 +59,14 @@ public struct PizzasSDK {
         return api.producer()
     }
     
-    public static func friends(at place: Place) -> SignalProducer<[Friend], NetworkError> {
+    public static func friends(at place: Place) -> SignalProducer<[Profile], NetworkError> {
         let api = PizzaAPI.friends
-        return api.producer()
+        let producer = api.producer() as SignalProducer<[Profile], NetworkError>
+        return producer.map {
+            $0.filter {
+                place.friendIds.contains($0.id.description)
+            }
+        }
     }
 }
 

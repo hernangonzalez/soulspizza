@@ -8,6 +8,7 @@
 
 import Foundation
 import PizzasSDK
+import Kingfisher
 
 struct PlaceViewModel {
     private let place: Place
@@ -21,6 +22,14 @@ extension PlaceViewModel {
     
     var name: String {
         return place.name
+    }
+    
+    var thumbnail: Resource? {
+        return place.images.first?.url
+    }
+    
+    var friends: UserCollectionViewModel {
+        return UserCollectionViewModel(at: place)
     }
 }
 

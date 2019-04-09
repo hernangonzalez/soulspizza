@@ -32,22 +32,24 @@ class PlaceViewController: UIViewController {
         view.backgroundColor = .white
         
         let scroll = UIScrollView(frame: .zero)
+        scroll.alwaysBounceVertical = true
+        scroll.bounces = true
         view.addSubview(scroll)
         scroll.edgesToSuperview()
         
         let thumbnail = UIImageView(frame: .zero)
         thumbnail.backgroundColor = .gray
         thumbnail.aspectRatio(1)
+        thumbnail.kf.indicatorType = .activity
+        thumbnail.kf.setImage(with: viewModel.thumbnail, options: [.transition(.fade(0.3))])
         
-        let content = [thumbnail].stacked(axis: .vertical)
+        let users = UserCollectionView(viewModel.friends)
+        users.height(60)
+        
+        let content = [thumbnail, users].stacked(axis: .vertical)
+        content.spacing = 12
         scroll.addSubview(content)
         content.widthToSuperview()
     }
 }
 
-
-class UserCollectionView: UICollectionView {
-//    convenience init(<#parameters#>) {
-//        <#statements#>
-//    }
-}

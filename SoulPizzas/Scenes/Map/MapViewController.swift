@@ -19,6 +19,7 @@ class MapViewController: UIViewController {
     private let viewModel: MapViewModel
     private let disposables = ScopedDisposable(CompositeDisposable())
     private lazy var search = SearchButton(frame: .zero)
+    private var firstLoad = false
     
     init(_ model: MapViewModel) {
         viewModel = model
@@ -42,14 +43,24 @@ class MapViewController: UIViewController {
         
         // Bindings
         search.reactive.pressed = CocoaAction(viewModel.refresh)
-        search.reactive.inProgress <~ viewModel.refresh.isExecuting
-        reactive.updateMarkers <~ viewModel.markers
-        reactive.presentError <~ viewModel.error
+        disposables += search.reactive.inProgress <~ viewModel.refresh.isExecuting
+        disposables += reactive.updateMarkers <~ viewModel.markers
+        disposables += reactive.presentError <~ viewModel.error
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         mapView.padding = view.safeAreaInsets
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if !firstLoad {
+            disposables += viewModel.refresh
+                .apply()
+                .start()
+            firstLoad = true
+        }
     }
     
     override var navigationItem: UINavigationItem {
@@ -104,7 +115,9 @@ extension MapViewController: GMSMapViewDelegate {
         
         if let detail = viewModel.detail(with: marker) {
             let router = PlaceDetailRouter(navigation: navigationController)
-            router.present(detail)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                router.present(detail)
+            }
             return true
         }
 

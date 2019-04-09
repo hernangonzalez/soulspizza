@@ -25,6 +25,10 @@
 		5FF6B81F225CFBA8005891ED /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B81E225CFBA8005891ED /* Cell.swift */; };
 		5FF6B821225CFD19005891ED /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B820225CFD18005891ED /* UIStackView.swift */; };
 		5FF6B823225D02CA005891ED /* UIViewController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B822225D02CA005891ED /* UIViewController+Error.swift */; };
+		5FF6B825225D08EA005891ED /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B824225D08EA005891ED /* ThumbnailView.swift */; };
+		5FF6B827225D0DC9005891ED /* UserCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B826225D0DC9005891ED /* UserCollectionView.swift */; };
+		5FF6B829225D0FDE005891ED /* UserCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B828225D0FDE005891ED /* UserCollectionViewModel.swift */; };
+		5FF6B82B225D1551005891ED /* UserThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B82A225D1551005891ED /* UserThumbnailCell.swift */; };
 		9E33AC4E1E55CBD482E627F8 /* Pods_SoulPizzas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */; };
 		F0DA1480D7078C56BCC0C6A7 /* Pods_PizzasSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D2FD2E88856E713B662CF /* Pods_PizzasSDK.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +78,10 @@
 		5FF6B81E225CFBA8005891ED /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		5FF6B820225CFD18005891ED /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		5FF6B822225D02CA005891ED /* UIViewController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Error.swift"; sourceTree = "<group>"; };
+		5FF6B824225D08EA005891ED /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		5FF6B826225D0DC9005891ED /* UserCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionView.swift; sourceTree = "<group>"; };
+		5FF6B828225D0FDE005891ED /* UserCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewModel.swift; sourceTree = "<group>"; };
+		5FF6B82A225D1551005891ED /* UserThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThumbnailCell.swift; sourceTree = "<group>"; };
 		7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulPizzas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39F016EAC2FDC90724FA3BD /* Pods-SoulPizzas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.release.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.release.xcconfig"; sourceTree = "<group>"; };
 		B6A2A1CECE831D7DF477CFCC /* Pods-SoulPizzas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.debug.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +199,7 @@
 				5FF6B812225C63C3005891ED /* SearchButton.swift */,
 				5FF6B815225C6777005891ED /* Animatable.swift */,
 				5FF6B822225D02CA005891ED /* UIViewController+Error.swift */,
+				5FF6B824225D08EA005891ED /* ThumbnailView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -209,6 +218,9 @@
 			children = (
 				5FF6B818225CF3D1005891ED /* PlaceViewController.swift */,
 				5FF6B81A225CF4D1005891ED /* PlaceViewModel.swift */,
+				5FF6B826225D0DC9005891ED /* UserCollectionView.swift */,
+				5FF6B828225D0FDE005891ED /* UserCollectionViewModel.swift */,
+				5FF6B82A225D1551005891ED /* UserThumbnailCell.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -418,12 +430,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF6B829225D0FDE005891ED /* UserCollectionViewModel.swift in Sources */,
 				5FF6B81D225CF5DA005891ED /* PlaceDetailRouter.swift in Sources */,
 				5FF6B81B225CF4D1005891ED /* PlaceViewModel.swift in Sources */,
 				5FF6B813225C63C3005891ED /* SearchButton.swift in Sources */,
 				5FF6B816225C6777005891ED /* Animatable.swift in Sources */,
+				5FF6B82B225D1551005891ED /* UserThumbnailCell.swift in Sources */,
 				5F85056D225BEC2D00643411 /* MapViewController.swift in Sources */,
+				5FF6B825225D08EA005891ED /* ThumbnailView.swift in Sources */,
 				5FF6B819225CF3D1005891ED /* PlaceViewController.swift in Sources */,
+				5FF6B827225D0DC9005891ED /* UserCollectionView.swift in Sources */,
 				5F850524225BC93600643411 /* AppDelegate.swift in Sources */,
 				5FF6B81F225CFBA8005891ED /* Cell.swift in Sources */,
 				5F850570225BEF2500643411 /* RootViewController.swift in Sources */,
@@ -587,7 +603,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DH3BP5LCYL;
 				INFOPLIST_FILE = SoulPizzas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -595,7 +611,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hernan.ios.SoulPizzas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "hernan-wildcard";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
