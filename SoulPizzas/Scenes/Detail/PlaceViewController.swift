@@ -46,10 +46,14 @@ class PlaceViewController: UIViewController {
         let users = UserCollectionView(viewModel.friends)
         users.height(60)
         
-        let content = [thumbnail, users].stacked(axis: .vertical)
+        let description = DescriptionView(frame: .zero)
+        
+        let content = [thumbnail, users, description].stacked(axis: .vertical)
         content.spacing = 12
         scroll.addSubview(content)
-        content.widthToSuperview()
+        content.width(to: view)
+        content.topToSuperview()
+        content.bottomToSuperview()
     }
 }
 

@@ -9,44 +9,16 @@ import Alamofire
 import ReactiveSwift
 import CoreLocation
 
-// MARK: - Models
-public struct Media: Decodable {
-    public let url: URL
-}
-
-public struct Place: Decodable {
-    let id: String
-    let latitude: Double
-    let longitude: Double
-    let friendIds: [String]
-    public let name: String
-    public let images: [Media]
-    public let formattedAddress: String
-    
-    public var coordinate: CLLocationCoordinate2D {
-        return .init(latitude: latitude, longitude: longitude)
-    }
-}
-
-public struct Profile: Decodable {
-    let id: Int
-    public let name: String
-    public let avatarUrl: URL
-}
-
-// MARK: Internals
-struct PlaceList: Decodable {
-    let places: [Place]
-}
-
-struct PlacesResponse: Decodable {
-    let list: PlaceList
-}
-
 // MARK: - SDK
 public struct PizzasSDK {
     
     public static func places() -> SignalProducer<[Place], NetworkError> {
+//        let place = Place(id: "0",
+//                          latitude: 10, longitude: 10,
+//                          friendIds: [],
+//                          name: "hardcoded", images: [],
+//                          formattedAddress: "")
+//        return SignalProducer(value: [place])
         let api = PizzaAPI.places
         let producer = api.producer() as SignalProducer<PlacesResponse, NetworkError>
         return producer.map {

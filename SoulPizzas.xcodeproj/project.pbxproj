@@ -29,6 +29,8 @@
 		5FF6B827225D0DC9005891ED /* UserCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B826225D0DC9005891ED /* UserCollectionView.swift */; };
 		5FF6B829225D0FDE005891ED /* UserCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B828225D0FDE005891ED /* UserCollectionViewModel.swift */; };
 		5FF6B82B225D1551005891ED /* UserThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B82A225D1551005891ED /* UserThumbnailCell.swift */; };
+		5FF6B82D225D189E005891ED /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B82C225D189E005891ED /* Models.swift */; };
+		5FF6B830225D237E005891ED /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B82F225D237E005891ED /* DescriptionView.swift */; };
 		9E33AC4E1E55CBD482E627F8 /* Pods_SoulPizzas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */; };
 		F0DA1480D7078C56BCC0C6A7 /* Pods_PizzasSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D2FD2E88856E713B662CF /* Pods_PizzasSDK.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,9 @@
 		5FF6B826225D0DC9005891ED /* UserCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionView.swift; sourceTree = "<group>"; };
 		5FF6B828225D0FDE005891ED /* UserCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewModel.swift; sourceTree = "<group>"; };
 		5FF6B82A225D1551005891ED /* UserThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThumbnailCell.swift; sourceTree = "<group>"; };
+		5FF6B82C225D189E005891ED /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		5FF6B82E225D1907005891ED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5FF6B82F225D237E005891ED /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulPizzas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39F016EAC2FDC90724FA3BD /* Pods-SoulPizzas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.release.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.release.xcconfig"; sourceTree = "<group>"; };
 		B6A2A1CECE831D7DF477CFCC /* Pods-SoulPizzas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.debug.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +137,7 @@
 		5F850517225BC93600643411 = {
 			isa = PBXGroup;
 			children = (
+				5FF6B82E225D1907005891ED /* README.md */,
 				5F850522225BC93600643411 /* SoulPizzas */,
 				5F85053A225BCAEF00643411 /* PizzasSDK */,
 				5F850521225BC93600643411 /* Products */,
@@ -169,6 +175,7 @@
 				5F850564225BD6F500643411 /* Network.swift */,
 				5F85053B225BCAEF00643411 /* PizzasSDK.swift */,
 				5F850566225BD91800643411 /* PizzaAPI.swift */,
+				5FF6B82C225D189E005891ED /* Models.swift */,
 			);
 			path = PizzasSDK;
 			sourceTree = "<group>";
@@ -221,6 +228,7 @@
 				5FF6B826225D0DC9005891ED /* UserCollectionView.swift */,
 				5FF6B828225D0FDE005891ED /* UserCollectionViewModel.swift */,
 				5FF6B82A225D1551005891ED /* UserThumbnailCell.swift */,
+				5FF6B82F225D237E005891ED /* DescriptionView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -444,6 +452,7 @@
 				5FF6B81F225CFBA8005891ED /* Cell.swift in Sources */,
 				5F850570225BEF2500643411 /* RootViewController.swift in Sources */,
 				5FF6B823225D02CA005891ED /* UIViewController+Error.swift in Sources */,
+				5FF6B830225D237E005891ED /* DescriptionView.swift in Sources */,
 				5F850572225BF4B200643411 /* MapViewModel.swift in Sources */,
 				5FF6B821225CFD19005891ED /* UIStackView.swift in Sources */,
 			);
@@ -456,6 +465,7 @@
 				5F850567225BD91800643411 /* PizzaAPI.swift in Sources */,
 				5F850565225BD6F500643411 /* Network.swift in Sources */,
 				5F85053C225BCAEF00643411 /* PizzasSDK.swift in Sources */,
+				5FF6B82D225D189E005891ED /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
