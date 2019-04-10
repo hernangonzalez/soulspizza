@@ -16,4 +16,5 @@ target 'PizzasSDK' do
   pod 'AlamofireNetworkActivityIndicator'
   pod 'ReachabilitySwift'
   pod 'ReactiveSwift'
+  pod 'Cosmos'
 end

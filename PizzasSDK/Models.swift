@@ -26,6 +26,10 @@ public struct Place: Decodable {
     public var coordinate: CLLocationCoordinate2D {
         return .init(latitude: latitude, longitude: longitude)
     }
+    
+    public var hasFriends: Bool {
+        return !friendIds.isEmpty
+    }
 }
 
 public struct Profile: Decodable {

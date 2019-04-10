@@ -35,6 +35,7 @@
 		5FF6B834225D3976005891ED /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B833225D3976005891ED /* UIKit.swift */; };
 		5FF6B836225D3A4E005891ED /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B835225D3A4E005891ED /* SpringButton.swift */; };
 		5FF6B838225D3AA3005891ED /* BookmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B837225D3AA3005891ED /* BookmarkButton.swift */; };
+		5FF6B83C225DC6BA005891ED /* PlaceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6B83B225DC6BA005891ED /* PlaceInfoView.swift */; };
 		9E33AC4E1E55CBD482E627F8 /* Pods_SoulPizzas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */; };
 		F0DA1480D7078C56BCC0C6A7 /* Pods_PizzasSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D2FD2E88856E713B662CF /* Pods_PizzasSDK.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		5FF6B833225D3976005891ED /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
 		5FF6B835225D3A4E005891ED /* SpringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
 		5FF6B837225D3AA3005891ED /* BookmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkButton.swift; sourceTree = "<group>"; };
+		5FF6B83B225DC6BA005891ED /* PlaceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoView.swift; sourceTree = "<group>"; };
 		7CBD1B9FE3D0974E6078CDE7 /* Pods_SoulPizzas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulPizzas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39F016EAC2FDC90724FA3BD /* Pods-SoulPizzas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.release.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.release.xcconfig"; sourceTree = "<group>"; };
 		B6A2A1CECE831D7DF477CFCC /* Pods-SoulPizzas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulPizzas.debug.xcconfig"; path = "Target Support Files/Pods-SoulPizzas/Pods-SoulPizzas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				5FF6B822225D02CA005891ED /* UIViewController+Error.swift */,
 				5FF6B824225D08EA005891ED /* ThumbnailView.swift */,
 				5FF6B835225D3A4E005891ED /* SpringButton.swift */,
+				5FF6B837225D3AA3005891ED /* BookmarkButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -240,7 +243,7 @@
 				5FF6B82A225D1551005891ED /* UserThumbnailCell.swift */,
 				5FF6B82F225D237E005891ED /* DescriptionView.swift */,
 				5FF6B831225D3507005891ED /* BookPlaceView.swift */,
-				5FF6B837225D3AA3005891ED /* BookmarkButton.swift */,
+				5FF6B83B225DC6BA005891ED /* PlaceInfoView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -370,6 +374,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +473,7 @@
 				5F850570225BEF2500643411 /* RootViewController.swift in Sources */,
 				5FF6B823225D02CA005891ED /* UIViewController+Error.swift in Sources */,
 				5FF6B830225D237E005891ED /* DescriptionView.swift in Sources */,
+				5FF6B83C225DC6BA005891ED /* PlaceInfoView.swift in Sources */,
 				5FF6B832225D3507005891ED /* BookPlaceView.swift in Sources */,
 				5F850572225BF4B200643411 /* MapViewModel.swift in Sources */,
 				5FF6B821225CFD19005891ED /* UIStackView.swift in Sources */,

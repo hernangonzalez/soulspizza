@@ -23,6 +23,8 @@ class BookmarkButton: SpringButton {
     }
     
     override func layoutSubviews() {
+        let inset = bounds.width * 0.2
+        imageEdgeInsets = .init(top: inset, left: inset, bottom: inset, right: inset)
         layer.cornerRadius = bounds.width / 2
         super.layoutSubviews()
     }

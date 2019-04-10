@@ -35,5 +35,9 @@ extension PlaceViewModel {
     var friends: UserCollectionViewModel {
         return UserCollectionViewModel(at: place)
     }
+    
+    var showFriends: Bool {
+        return place.hasFriends
+    }
 }
 

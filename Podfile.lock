@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.8.2)
   - AlamofireNetworkActivityIndicator (2.4.0):
     - Alamofire (~> 4.8)
+  - Cosmos (18.0.1)
   - GoogleMaps (3.0.3):
     - GoogleMaps/Maps (= 3.0.3)
   - GoogleMaps/Base (3.0.3)
@@ -25,6 +26,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireNetworkActivityIndicator
+  - Cosmos
   - GoogleMaps
   - Kingfisher
   - Motion
@@ -38,6 +40,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireNetworkActivityIndicator
+    - Cosmos
     - GoogleMaps
     - Kingfisher
     - Motion
@@ -51,6 +54,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireNetworkActivityIndicator: 9acc3de3ca6645bf0efed462396b0df13dd3e7b8
+  Cosmos: 7dfaa3f52584ca5f94ab74b5c2e264019cc9f7f5
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
   TinyConstraints: 03bc091844b98c18dbaead8b1153242a42721b56
 
-PODFILE CHECKSUM: c8a19c917b5bd30067335dc569bbecddce90c710
+PODFILE CHECKSUM: 62e5c8266cca092ce2ebb03215360354f6464a8e
 
 COCOAPODS: 1.6.1
