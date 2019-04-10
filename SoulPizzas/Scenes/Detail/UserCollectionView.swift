@@ -22,6 +22,8 @@ class UserCollectionView: UICollectionView {
         register(UserThumbnailCell.self)
         backgroundColor = .white
         dataSource = self
+        bounces = true
+        alwaysBounceHorizontal = true
         
         reactive.reloadData <~ model.reload
     }

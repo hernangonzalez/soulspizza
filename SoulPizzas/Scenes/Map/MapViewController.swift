@@ -11,6 +11,7 @@ import GoogleMaps
 import TinyConstraints
 import ReactiveCocoa
 import ReactiveSwift
+import Kingfisher
 
 class MapViewController: UIViewController {
     private weak var mapView: GMSMapView!
@@ -79,15 +80,26 @@ class MapViewController: UIViewController {
         return item
     }
     
-    fileprivate func update(markers: [GMSMarker]) {
+    fileprivate func update(markers: [Marker]) {
+        // Remove previous results
+        mapView.clear()
+        
+        // Assing results to map
         markers.forEach {
             $0.map = self.mapView
         }
         
+        // Prefetch thumbnails
+        let resources = markers.compactMap { $0.thumbnail }
+        let prefetcher = ImagePrefetcher(resources: resources)
+        prefetcher.start()
+        
+        // Resolve map bound
         let bounds: GMSCoordinateBounds = markers.reduce(.init()) { result, marker in
             return result.includingCoordinate(marker.position)
         }
         
+        // Focus on results
         if bounds.isValid {
             let camera = GMSCameraUpdate.fit(bounds)
             mapView.animate(with: camera)
@@ -115,9 +127,7 @@ extension MapViewController: GMSMapViewDelegate {
         
         if let detail = viewModel.detail(with: marker) {
             let router = PlaceDetailRouter(navigation: navigationController)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                router.present(detail)
-            }
+            router.route(detail)
             return true
         }
 

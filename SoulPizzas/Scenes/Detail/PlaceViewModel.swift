@@ -24,6 +24,10 @@ extension PlaceViewModel {
         return place.name
     }
     
+    var address: String {
+        return place.formattedAddress
+    }
+    
     var thumbnail: Resource? {
         return place.images.first?.url
     }

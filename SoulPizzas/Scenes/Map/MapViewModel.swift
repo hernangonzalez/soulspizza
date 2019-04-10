@@ -56,4 +56,8 @@ class Marker: GMSMarker {
         title = place.name
         snippet = place.formattedAddress
     }
+    
+    var thumbnail: URL? {
+        return model.images.first?.url
+    }
 }
