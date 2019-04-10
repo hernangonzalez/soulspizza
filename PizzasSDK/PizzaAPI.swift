@@ -14,16 +14,22 @@ enum PizzaAPI: NetworkAPI {
     case detail(String)
     case friends
     
+    var alternate: Bool {
+        return true
+    }
+    
     var baseURL: URL {
-        return URL(string: "https://pizzaplaces.free.beeceptor.com/")!
+        return alternate
+            ? URL(string: "http://demo4327201.mockable.io/pizza-api/")!
+            : URL(string: "https://pizzaplaces.free.beeceptor.com/")!
     }
 
     var path: String {
         switch self {
         case .places:
-            return "pizza"
+            return alternate ? "pizzaplaces" : "pizza"
         case .detail(let id):
-            return "pizza/\(id)"
+            return alternate ? "pizzaplaces\(id)" : "pizza/\(id)"
         case .friends:
             return "friends"
         }
