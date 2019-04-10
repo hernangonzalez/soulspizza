@@ -5,7 +5,6 @@ target 'SoulPizzas' do
   pod 'GoogleMaps'
   pod 'TinyConstraints'
   pod 'ReactiveCocoa'
-  pod 'Motion'
   pod 'Kingfisher'
   pod 'SwiftMessages'
 end
